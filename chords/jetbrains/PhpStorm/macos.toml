@@ -1,0 +1,12 @@
+[config]
+name = "PhpStorm"
+extends = "@keychord/chords-jetbrains/chords/base.toml"
+
+[config.js]
+module = '''
+import buildHandler from 'dist/jetbrains.js';
+export default buildHandler(
+  import.meta,
+  "/Applications/PhpStorm.app/Contents/MacOS/phpstorm"
+)
+'''

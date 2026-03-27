@@ -1,0 +1,12 @@
+[config]
+name = "Rider"
+extends = "@keychord/chords-jetbrains/chords/base.toml"
+
+[config.js]
+module = '''
+import buildHandler from 'dist/jetbrains.js';
+export default buildHandler(
+  import.meta,
+  "/Applications/Rider.app/Contents/MacOS/rider"
+)
+'''

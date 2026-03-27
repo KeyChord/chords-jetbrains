@@ -1,0 +1,12 @@
+[config]
+name = "CLion"
+extends = "@keychords/chords-jetbrains/chords/com.jetbrains.intellij"
+
+[config.js]
+module = '''
+import buildHandler from 'dist/jetbrains.js';
+export default buildHandler(
+  import.meta,
+  "/Applications/CLion.app/Contents/MacOS/clion"
+)
+'''

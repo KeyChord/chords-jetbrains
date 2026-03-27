@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "nodenext",
+    "allowJs": true,
+    "types": ["chord-types", "llrt-types"],
+    "paths": {
+      "#/*": ["./src/*"]
+    },
+    "moduleResolution": "nodenext",
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "noEmit": true,
+  },
+  "include": ["src"]
+}

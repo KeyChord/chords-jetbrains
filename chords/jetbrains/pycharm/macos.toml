@@ -1,0 +1,12 @@
+[config]
+name = "PyCharm"
+extends = "@keychord/chords-jetbrains/chords/base.toml"
+
+[config.js]
+module = '''
+import buildHandler from 'dist/jetbrains.js';
+export default buildHandler(
+  import.meta,
+  "/Applications/PyCharm.app/Contents/MacOS/pycharm"
+)
+'''
