@@ -1,29 +1,23 @@
-[config]
 name = "JetBrains Base Chords"
+meta = { ideBinPath = "" }
 
-[config.js]
-module = '''
-import buildHandler from "dist/jetbrains.js";
-export default buildHandler(
-  import.meta,
-  "/Applications/IntelliJ IDEA.app/Contents/MacOS/idea"
-)
-'''
+[js]
+action = "jetbrains.js"
 
 [chords]
 '?e' = { name = "Editor" }
-ea = { name = "Editor: Actions", args = ['QuickActions'] }
-es = { name = "Editor: Solutions", args = ['QuickFixes'] }
+ea = { name = "Editor: Actions", 'js:action' = ['QuickActions'] }
+es = { name = "Editor: Solutions", 'js:action' = ['QuickFixes'] }
 ef = { name = "Editor: Focus", shortcut = "esc" }
-ep = { name = "Editor: Pin", args = ['PinActiveEditorTab'] }
-eu = { name = "Editor: Unpin", args = ['PinActiveTabToggle'] }
-eq = { name = "Editor: Quit", args = ['CloseEditor'] }
-eqa = { name = "Editor: Quit All", args = ['CloseAllEditors'] }
-eqo = { name = "Editor: Quit Others", args = ['CloseAllEditorsButActive'] }
-eql = { name = "Editor: Quit to the Left", args = ['CloseEditorsToTheLeft'] }
-eqr = { name = "Editor: Quit to the Right", args = ['CloseEditorsToTheRight'] }
-equ = { name = "Editor: Quit Unmodified", args = ['CloseUnmodifiedEditors'] }
-eqp = { name = "Editor: Quit Pinless", args = ['CloseUnpinnedEditors'] }
+ep = { name = "Editor: Pin", 'js:action' = ['PinActiveEditorTab'] }
+eu = { name = "Editor: Unpin", 'js:action' = ['PinActiveTabToggle'] }
+eq = { name = "Editor: Quit", 'js:action' = ['CloseEditor'] }
+eqa = { name = "Editor: Quit All", 'js:action' = ['CloseAllEditors'] }
+eqo = { name = "Editor: Quit Others", 'js:action' = ['CloseAllEditorsButActive'] }
+eql = { name = "Editor: Quit to the Left", 'js:action' = ['CloseEditorsToTheLeft'] }
+eqr = { name = "Editor: Quit to the Right", 'js:action' = ['CloseEditorsToTheRight'] }
+equ = { name = "Editor: Quit Unmodified", 'js:action' = ['CloseUnmodifiedEditors'] }
+eqp = { name = "Editor: Quit Pinless", 'js:action' = ['CloseUnpinnedEditors'] }
 
 '?t' = { name = "Tab" }
 ta = { name = "Tab: All", command = "action('TabList')" }
@@ -31,17 +25,17 @@ tv = { name = "Tab: Previous", command = "action('PreviousTab')" }
 tx = { name = "Tab: Next", command = "action('NextTab')" }
 tb = { name = "Tab: Back", command = "action('GoToLastTab')" }
 to = { name = "Tab: Open Recently Closed", command = "action('ReopenClosedTab')" }
-t1 = { name = "Tab 1", args = ['GoToTab1'] }
-t2 = { name = "Tab 2", args = ['GoToTab2'] }
-t3 = { name = "Tab 3", args = ['GoToTab3'] }
-t4 = { name = "Tab 4", args = ['GoToTab4'] }
-t5 = { name = "Tab 5", args = ['GoToTab5'] }
-t6 = { name = "Tab 6", args = ['GoToTab6'] }
-t7 = { name = "Tab 7", args = ['GoToTab7'] }
-t8 = { name = "Tab 8", args = ['GoToTab8'] }
-t9 = { name = "Tab 9", args = ['GoToTab9'] }
-td = { name = "Tab: Move Down", args = ['MoveTabDown'] }
-tr = { name = "Tab: Move Right", args = ['MoveTabRight'] }
+t1 = { name = "Tab 1", 'js:action' = ['GoToTab1'] }
+t2 = { name = "Tab 2", 'js:action' = ['GoToTab2'] }
+t3 = { name = "Tab 3", 'js:action' = ['GoToTab3'] }
+t4 = { name = "Tab 4", 'js:action' = ['GoToTab4'] }
+t5 = { name = "Tab 5", 'js:action' = ['GoToTab5'] }
+t6 = { name = "Tab 6", 'js:action' = ['GoToTab6'] }
+t7 = { name = "Tab 7", 'js:action' = ['GoToTab7'] }
+t8 = { name = "Tab 8", 'js:action' = ['GoToTab8'] }
+t9 = { name = "Tab 9", 'js:action' = ['GoToTab9'] }
+td = { name = "Tab: Move Down", 'js:action' = ['MoveTabDown'] }
+tr = { name = "Tab: Move Right", 'js:action' = ['MoveTabRight'] }
 
 '?f' = { name = "Find/File" }
 
@@ -57,13 +51,13 @@ fa = { name = "Find Action", command = "Find Action...", shortcut = "cmd+shift+a
 fp = { name = "File: Path", shortcut = "cmd+shift+c" }
 fb = { name = "File: Back", command = "Recent Files", shortcut = "cmd+e" }
 fn = { name = "File: New", command = "New in This Directory", shortcut = "ctrl+option+n" }
-fnn = { name = "File: New Name", args = ['RenameFile'] }
+fnn = { name = "File: New Name", 'js:action' = ['RenameFile'] }
 fns = { name = "File: New Scratch", shortcut = "cmd+shift+n" }
-fh = { name = "File: Here", args = ['NewFile'] }
-fd = { name = "File: Directory", args = ['NewDir'] }
+fh = { name = "File: Here", 'js:action' = ['NewFile'] }
+fd = { name = "File: Directory", 'js:action' = ['NewDir'] }
 ft = { name = "File: Trash", shortcut = "cmd+delete" }
 fvs = { name = "File: View Structure", command = "File Structure", shortcut = "cmd+f12" }
-fs = { name = "File: Show", args = ['SelectInProjectView'] }
+fs = { name = "File: Show", 'js:action' = ['SelectInProjectView'] }
 
 '?b' = { name = "Build" }
 bp = { name = "Build Project", command = "Build Project", shortcut = "cmd+f9" }
@@ -71,13 +65,13 @@ br = { name = "Build: Rebuild", command = "Rebuild", shortcut = "cmd+shift+f9" }
 
 '?s' = { name = "Split/Search" }
 # Split
-sr = { name = "Split: Right", args = ['SplitHorizontally'] }
-sd = { name = "Split: Down", args = ['SplitVertically'] }
-so = { name = "Split: Orientation", args = ['ChangeSplitOrientation'] }
+sr = { name = "Split: Right", 'js:action' = ['SplitHorizontally'] }
+sd = { name = "Split: Down", 'js:action' = ['SplitVertically'] }
+so = { name = "Split: Orientation", 'js:action' = ['ChangeSplitOrientation'] }
 sx = { name = "Split: Next", shortcut = "opt+right" }
 sv = { name = "Split: Previous", shortcut = "opt+shift+right" }
-sq = { name = "Split: Quit", args = ['Unsplit'] }
-sqa = { name = "Split: Quit All", args = ['UnsplitAll'] }
+sq = { name = "Split: Quit", 'js:action' = ['Unsplit'] }
+sqa = { name = "Split: Quit All", 'js:action' = ['UnsplitAll'] }
 
 # Search
 sg = { name = "Search: Globally", command = "Search Everywhere", shortcut = "shift shift" }
@@ -114,27 +108,27 @@ fsd = { name = "Font Size: Decrease", command = "Decrease Font Size in All Edito
 ff = { name = "Folding: Fold", command = "Collapse", shortcut = "cmd+NumpadSubtract" }
 ffs = { name = "Folding: Fold Selection", command = "Fold Selection", shortcut = "cmd+." }
 ffa = { name = "Folding: Fold All", command = "Expand All", shortcut = "cmd+shift+NumpadAdd" }
-ffc = { name = "Folding: Fold Comments", args = ['CollapseDocComments'] }
+ffc = { name = "Folding: Fold Comments", 'js:action' = ['CollapseDocComments'] }
 ffr = { name = "Folding: Fold Recursively", command = "Collapse Recursively", shortcut = "cmd+option+NumpadSubtract" }
 '?fu' = { name = "Folding Unfold" }
 fu = { name = "Folding: Unfold", command = "Expand", shortcut = "cmd+NumpadAdd" }
 fua = { name = "Folding: Unfold All", command = "Collapse All", shortcut = "cmd+shift+NumpadSubtract" }
-fuc = { name = "Folding: Unfold Comments", args = ['ExpandDocComments'] }
+fuc = { name = "Folding: Unfold Comments", 'js:action' = ['ExpandDocComments'] }
 fur = { name = "Folding: Unfold Recursively", command = "Expand Recursively", shortcut = "cmd+option+NumpadAdd" }
 '?f{1..5,l}' = { name = "Folding Level" }
-fl = { name = "Folding: Level", args = ['ExpandToLevel'] }
-f1 = { name = "Folding: Level 1", args = ['ExpandToLevel1'] }
-f2 = { name = "Folding: Level 2", args = ['ExpandToLevel2'] }
-f3 = { name = "Folding: Level 3", args = ['ExpandToLevel3'] }
-f4 = { name = "Folding: Level 4", args = ['ExpandToLevel4'] }
-f5 = { name = "Folding: Level 5", args = ['ExpandToLevel5'] }
+fl = { name = "Folding: Level", 'js:action' = ['ExpandToLevel'] }
+f1 = { name = "Folding: Level 1", 'js:action' = ['ExpandToLevel1'] }
+f2 = { name = "Folding: Level 2", 'js:action' = ['ExpandToLevel2'] }
+f3 = { name = "Folding: Level 3", 'js:action' = ['ExpandToLevel3'] }
+f4 = { name = "Folding: Level 4", 'js:action' = ['ExpandToLevel4'] }
+f5 = { name = "Folding: Level 5", 'js:action' = ['ExpandToLevel5'] }
 '?fa{1..5,l}' = { name = "Folding All Level" }
-fal = { name = "Folding: All Level", args = ['ExpandAllToLevel'] }
-fa1 = { name = "Folding: All Level 1", args = ['ExpandAllToLevel1'] }
-fa2 = { name = "Folding: All Level 2", args = ['ExpandAllToLevel2'] }
-fa3 = { name = "Folding: All Level 3", args = ['ExpandAllToLevel3'] }
-fa4 = { name = "Folding: All Level 4", args = ['ExpandAllToLevel4'] }
-fa5 = { name = "Folding: All Level 5", args = ['ExpandAllToLevel5'] }
+fal = { name = "Folding: All Level", 'js:action' = ['ExpandAllToLevel'] }
+fa1 = { name = "Folding: All Level 1", 'js:action' = ['ExpandAllToLevel1'] }
+fa2 = { name = "Folding: All Level 2", 'js:action' = ['ExpandAllToLevel2'] }
+fa3 = { name = "Folding: All Level 3", 'js:action' = ['ExpandAllToLevel3'] }
+fa4 = { name = "Folding: All Level 4", 'js:action' = ['ExpandAllToLevel4'] }
+fa5 = { name = "Folding: All Level 5", 'js:action' = ['ExpandAllToLevel5'] }
 
 # Multiple carets and selection ranges
 # = { name = "Add/Remove Caret", command = "Add/Remove Caret", shortcut = "option+shift+click" }
@@ -193,13 +187,13 @@ ce = { name = "Code: Error Description", command = "Error Description", shortcut
 # Goto
 '?g' = { name = 'Goto / Git' }
 gl = { name = "Go to Line/Column...", command = "Go to Line/Column...", shortcut = "cmd+l" }
-gk = { name = "Goto Class", args = ['GotoClass'] }
+gk = { name = "Goto Class", 'js:action' = ['GotoClass'] }
 gpx = { name = "Goto Problem: Next", command = "Next Highlighted Error", shortcut = "f2" }
 gpv = { name = "Goto Problem: Previous", command = "Previous Highlighted Error", shortcut = "shift+f2" }
 gd = { name = "Goto Declaration or Usages", command = "Go to Declaration or Usages", shortcut = "cmd+b" }
 gy = { name = "Goto Type Declaration", command = "Go to Type Declaration", shortcut = "cmd+shift+b" }
 gsm = { name = "Goto Super Method", command = "Go to Super Method", shortcut = "cmd+u" }
-gm = { name = "Goto Menu", args = ['GoToMenu'] }
+gm = { name = "Goto Menu", 'js:action' = ['GoToMenu'] }
 gi = { name = "Goto Implementation(s)", command = "Go to Implementation(s)", shortcut = "cmd+option+b" }
 gs = { name = "Goto Symbol", command = "Go to Symbol...", shortcut = "cmd+option+o" }
 gt = { name = "Goto Test", command = "Go to Test", shortcut = "cmd+shift+t" }
@@ -331,6 +325,6 @@ pc = { name = "Panel: Commit", command = "Show Commit window", shortcut = "cmd+0
 pt = { name = "Panel: Terminal", command = "Show Terminal window", shortcut = "opt+f12" }
 
 '?z' = { name = "Zoom / Zen" }
-zo = { name = "Zoom Out", args = ['ZoomOutIdeAction'] }
-zi = { name = "Zoom In", args = ['ZoomInIdeAction'] }
-zm = { name = "Zen Mode", args = ['ToggleZenMode'] }
+zo = { name = "Zoom Out", 'js:action' = ['ZoomOutIdeAction'] }
+zi = { name = "Zoom In", 'js:action' = ['ZoomInIdeAction'] }
+zm = { name = "Zen Mode", 'js:action' = ['ToggleZenMode'] }

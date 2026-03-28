@@ -1,12 +1,7 @@
-[config]
 name = "CLion"
-extends = "@keychords/chords-jetbrains/chords/com.jetbrains.intellij"
 
-[config.js]
-module = '''
-import buildHandler from 'dist/jetbrains.js';
-export default buildHandler(
-  import.meta,
-  "/Applications/CLion.app/Contents/MacOS/clion"
-)
-'''
+[chords.'(.*)']
+file = [
+  "@keychords/chords-jetbrains/chords/base.toml",
+  { meta = { ideBinPath = "/Applications/CLion.app/Contents/MacOS/clion" } }
+]

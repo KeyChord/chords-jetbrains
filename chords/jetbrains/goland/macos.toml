@@ -1,12 +1,7 @@
-[config]
 name = "GoLand"
-extends = "@keychord/chords-jetbrains/chords/base.toml"
 
-[config.js]
-module = '''
-import buildHandler from 'dist/jetbrains.js';
-export default buildHandler(
-  import.meta,
-  "/Applications/GoLand.app/Contents/MacOS/goland"
-)
-'''
+[chords.'(.*)']
+file = [
+  "@keychords/chords-jetbrains/chords/base.toml",
+  { meta = { ideBinPath = "/Applications/GoLand.app/Contents/MacOS/goland" } }
+]

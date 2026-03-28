@@ -1,12 +1,7 @@
-[config]
 name = "IntelliJ IDEA"
-extends = "@keychord/chords-jetbrains/chords/base.toml"
 
-[config.js]
-module = '''
-import buildHandler from 'dist/jetbrains.js';
-export default buildHandler(
-  import.meta,
-  "/Applications/IntelliJ IDEA.app/Contents/MacOS/idea"
-)
-'''
+[chords.'(.*)']
+file = [
+  "@keychords/chords-jetbrains/chords/base.toml",
+  { meta = { ideBinPath = "/Applications/IntelliJ IDEA.app/Contents/MacOS/idea" } }
+]
