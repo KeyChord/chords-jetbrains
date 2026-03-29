@@ -1,7 +1,7 @@
 name = "IntelliJ IDEA"
 
 [meta]
-'@keychords/chords-jetbrains' = { ideBinPath = '/Applications/IntelliJ IDEA.app/Contents/MacOS/idea' }
+'@keychord/chords-jetbrains/js/jetbrains.js' = { ideBinPath = '/Applications/IntelliJ IDEA.app/Contents/MacOS/idea' }
 
 [chords.'(.*)']
-file = "@keychords/chords-jetbrains/chords/base.toml"
+file = "@keychord/chords-jetbrains/chords/base.toml"

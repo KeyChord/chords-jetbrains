@@ -1,7 +1,7 @@
 name = "Rider"
 
 [meta]
-'@keychords/chords-jetbrains' = { ideBinPath = '/Applications/Rider.app/Contents/MacOS/rider' }
+'@keychord/chords-jetbrains/js/jetbrains.js' = { ideBinPath = '/Applications/Rider.app/Contents/MacOS/rider' }
 
 [chords.'(.*)']
-file = "@keychords/chords-jetbrains/chords/base.toml"
+file = "@keychord/chords-jetbrains/chords/base.toml"

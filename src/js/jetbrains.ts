@@ -7,7 +7,12 @@ const tmp = process.env.TMPDIR ?? "/tmp";
 
 type Context = {
   controller: AbortController
-  meta: { ideBinPath: string }
+}
+
+declare global {
+  interface ImportMeta {
+    ideBinPath: string
+  }
 }
 
 // This function makes it possible to programmatically execute IntelliJ commands
@@ -39,7 +44,7 @@ export default async function action(this: Context, commandId: string) {
   `;
 
   fs.writeFileSync(scriptPath, script);
-  const process = spawn(this.meta.ideBinPath, ["ideScript", scriptPath]);
+  const process = spawn(import.meta.ideBinPath, ["ideScript", scriptPath]);
   const nodeChildProcess = await process.nodeChildProcess
   this.controller.signal.addEventListener("abort", () => {
     nodeChildProcess.kill()

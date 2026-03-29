@@ -1,8 +1,5 @@
 name = "JetBrains Base Chords"
 
-[meta]
-'@keychords/chords-jetbrains' = { ideBinPath = '' }
-
 [js]
 action = "jetbrains.js"
 
