@@ -3,9 +3,15 @@ import { outdent } from "outdent";
 import path from "path";
 import spawn from "nano-spawn-compat";
 
+const tmp = process.env.TMPDIR ?? "/tmp";
+
+type Context = {
+  controller: AbortController
+  meta: { ideBinPath: string }
+}
+
 // This function makes it possible to programmatically execute IntelliJ commands
-export default async function action(this: ImportMeta, commandId: string) {
-  const tmp = process.env.TMPDIR ?? "/tmp";
+export default async function action(this: Context, commandId: string) {
   const id = Math.random();
   const scriptPath = path.join(tmp, `jetbrains_action_${id}.groovy`);
   const resultPath = path.join(tmp, `jetbrains_action_${id}.txt`);
@@ -33,9 +39,14 @@ export default async function action(this: ImportMeta, commandId: string) {
   `;
 
   fs.writeFileSync(scriptPath, script);
-  await spawn(this.ideBinPath, ["ideScript", scriptPath]);
-  const result = fs.readFileSync(resultPath, "utf8");
+  const process = spawn(this.meta.ideBinPath, ["ideScript", scriptPath]);
+  const nodeChildProcess = await process.nodeChildProcess
+  this.controller.signal.addEventListener("abort", () => {
+    nodeChildProcess.kill()
+  });
+  await process;
 
+  const result = fs.readFileSync(resultPath, "utf8");
   fs.rmSync(scriptPath);
   fs.rmSync(resultPath);
 

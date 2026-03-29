@@ -1,7 +1,7 @@
 name = "RubyMine"
 
+[meta]
+'@keychords/chords-jetbrains' = { ideBinPath = '/Applications/RubyMine.app/Contents/MacOS/rubymine' }
+
 [chords.'(.*)']
-file = [
-  "@keychords/chords-jetbrains/chords/base.toml",
-  { meta = { ideBinPath = "/Applications/RubyMine.app/Contents/MacOS/rubymine" } }
-]
+file = "@keychords/chords-jetbrains/chords/base.toml"

@@ -1,7 +1,7 @@
 name = "PhpStorm"
 
+[meta]
+'@keychords/chords-jetbrains' = { ideBinPath = '/Applications/PhpStorm.app/Contents/MacOS/phpstorm' }
+
 [chords.'(.*)']
-file = [
-  "@keychords/chords-jetbrains/chords/base.toml",
-  { meta = { ideBinPath = "/Applications/PhpStorm.app/Contents/MacOS/phpstorm" } }
-]
+file = "@keychords/chords-jetbrains/chords/base.toml"
