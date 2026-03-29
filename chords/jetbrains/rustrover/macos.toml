@@ -1,7 +1,7 @@
 name = "RustRover"
 
-[meta]
-'@keychord/chords-jetbrains/js/jetbrains.js' = { ideBinPath = '/Applications/RustRover.app/Contents/MacOS/rustrover' }
+[js]
+jetbrains = ['/Applications/RustRover.app/Contents/MacOS/rustrover']
 
 [chords.'(.*)']
 file = "@keychord/chords-jetbrains/chords/base.toml"

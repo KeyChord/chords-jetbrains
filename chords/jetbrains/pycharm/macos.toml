@@ -1,7 +1,7 @@
 name = "PyCharm"
 
-[meta]
-'@keychord/chords-jetbrains/js/jetbrains.js' = { ideBinPath = '/Applications/PyCharm.app/Contents/MacOS/pycharm' }
+[js]
+jetbrains = ['/Applications/PyCharm.app/Contents/MacOS/pycharm']
 
 [chords.'(.*)']
 file = "@keychord/chords-jetbrains/chords/base.toml"

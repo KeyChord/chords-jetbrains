@@ -1,7 +1,7 @@
 name = "WebStorm"
 
-[meta]
-'@keychord/chords-jetbrains/js/jetbrains.js' = { ideBinPath = '/Applications/WebStorm.app/Contents/MacOS/webstorm' }
+[js]
+jetbrains = ['/Applications/WebStorm.app/Contents/MacOS/webstorm']
 
 [chords.'(.*)']
 file = "@keychord/chords-jetbrains/chords/base.toml"

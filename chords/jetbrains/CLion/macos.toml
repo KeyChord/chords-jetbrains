@@ -1,7 +1,7 @@
 name = "CLion"
 
-[meta]
-'@keychord/chords-jetbrains/js/jetbrains.js' = { ideBinPath = '/Applications/CLion.app/Contents/MacOS/clion' }
+[js]
+jetbrains = ["/Applications/CLion.app/Contents/MacOS/clion"]
 
 [chords.'(.*)']
 file = "@keychord/chords-jetbrains/chords/base.toml"

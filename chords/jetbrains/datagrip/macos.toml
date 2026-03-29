@@ -1,7 +1,7 @@
 name = "DataGrip"
 
-[meta]
-'@keychord/chords-jetbrains/js/jetbrains.js' = { ideBinPath = '/Applications/DataGrip.app/Contents/MacOS/datagrip' }
+[js]
+jetbrains = ['/Applications/DataGrip.app/Contents/MacOS/datagrip']
 
 [chords.'(.*)']
-file = "@keychord/chords-jetbrains/chords/base.toml"
+file = '@keychord/chords-jetbrains/chords/base.toml'

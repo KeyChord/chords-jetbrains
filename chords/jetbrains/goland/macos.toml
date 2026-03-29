@@ -1,7 +1,7 @@
 name = "GoLand"
 
 [meta]
-'@keychord/chords-jetbrains/js/jetbrains.js' = { ideBinPath = '/Applications/GoLand.app/Contents/MacOS/goland' }
+jetbrains = ['/Applications/GoLand.app/Contents/MacOS/goland']
 
 [chords.'(.*)']
 file = "@keychords/chords-jetbrains/chords/base.toml"
