@@ -7,7 +7,7 @@
     "outdent": "^0.8.0"
   },
   "devDependencies": {
-    "@keychord/tsconfig": "^0.0.5",
+    "@keychord/tsconfig": "^0.0.6",
     "@keychord/config": "latest"
   }
 }
