@@ -1,7 +1,9 @@
 name = "RustRover"
 
-[js]
-jetbrains = ['/Applications/RustRover.app/Contents/MacOS/rustrover']
+[handlers.command]
+file = "jetbrains.js"
+args = ['/Applications/RustRover.app/Contents/MacOS/rustrover']
 
-[chords.'(.*)']
-file = "@keychord/chords-jetbrains/chords/base.toml"
+[[import]]
+file = "base.toml"
+

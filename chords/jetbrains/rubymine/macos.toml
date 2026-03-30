@@ -1,7 +1,8 @@
 name = "RubyMine"
 
-[js]
-jetbrains = ['/Applications/RubyMine.app/Contents/MacOS/rubymine']
+[handlers.command]
+file = "jetbrains.js"
+args = ['/Applications/RubyMine.app/Contents/MacOS/rubymine']
 
-[chords.'(.*)']
-file = "@keychord/chords-jetbrains/chords/base.toml"
+[[import]]
+file = "base.toml"

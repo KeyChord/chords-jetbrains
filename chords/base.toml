@@ -1,22 +1,19 @@
 name = "JetBrains Base Chords"
 
-[js]
-jetbrains = [""]
-
 [chords]
 '?e' = { name = "Editor" }
-ea = { name = "Editor: Actions", 'js:jetbrains' = ['QuickActions'] }
-es = { name = "Editor: Solutions", 'js:jetbrains' = ['QuickFixes'] }
+ea = { name = "Editor: Actions", 'emit:command' = ['QuickActions'] }
+es = { name = "Editor: Solutions", 'emit:command' = ['QuickFixes'] }
 ef = { name = "Editor: Focus", shortcut = "esc" }
-ep = { name = "Editor: Pin", 'js:jetbrains' = ['PinActiveEditorTab'] }
-eu = { name = "Editor: Unpin", 'js:jetbrains' = ['PinActiveTabToggle'] }
-eq = { name = "Editor: Quit", 'js:jetbrains' = ['CloseEditor'] }
-eqa = { name = "Editor: Quit All", 'js:jetbrains' = ['CloseAllEditors'] }
-eqo = { name = "Editor: Quit Others", 'js:jetbrains' = ['CloseAllEditorsButActive'] }
-eql = { name = "Editor: Quit to the Left", 'js:jetbrains' = ['CloseEditorsToTheLeft'] }
-eqr = { name = "Editor: Quit to the Right", 'js:jetbrains' = ['CloseEditorsToTheRight'] }
-equ = { name = "Editor: Quit Unmodified", 'js:jetbrains' = ['CloseUnmodifiedEditors'] }
-eqp = { name = "Editor: Quit Pinless", 'js:jetbrains' = ['CloseUnpinnedEditors'] }
+ep = { name = "Editor: Pin", 'emit:command' = ['PinActiveEditorTab'] }
+eu = { name = "Editor: Unpin", 'emit:command' = ['PinActiveTabToggle'] }
+eq = { name = "Editor: Quit", 'emit:command' = ['CloseEditor'] }
+eqa = { name = "Editor: Quit All", 'emit:command' = ['CloseAllEditors'] }
+eqo = { name = "Editor: Quit Others", 'emit:command' = ['CloseAllEditorsButActive'] }
+eql = { name = "Editor: Quit to the Left", 'emit:command' = ['CloseEditorsToTheLeft'] }
+eqr = { name = "Editor: Quit to the Right", 'emit:command' = ['CloseEditorsToTheRight'] }
+equ = { name = "Editor: Quit Unmodified", 'emit:command' = ['CloseUnmodifiedEditors'] }
+eqp = { name = "Editor: Quit Pinless", 'emit:command' = ['CloseUnpinnedEditors'] }
 
 '?t' = { name = "Tab" }
 ta = { name = "Tab: All", command = "action('TabList')" }
@@ -24,17 +21,17 @@ tv = { name = "Tab: Previous", command = "action('PreviousTab')" }
 tx = { name = "Tab: Next", command = "action('NextTab')" }
 tb = { name = "Tab: Back", command = "action('GoToLastTab')" }
 to = { name = "Tab: Open Recently Closed", command = "action('ReopenClosedTab')" }
-t1 = { name = "Tab 1", 'js:jetbrains' = ['GoToTab1'] }
-t2 = { name = "Tab 2", 'js:jetbrains' = ['GoToTab2'] }
-t3 = { name = "Tab 3", 'js:jetbrains' = ['GoToTab3'] }
-t4 = { name = "Tab 4", 'js:jetbrains' = ['GoToTab4'] }
-t5 = { name = "Tab 5", 'js:jetbrains' = ['GoToTab5'] }
-t6 = { name = "Tab 6", 'js:jetbrains' = ['GoToTab6'] }
-t7 = { name = "Tab 7", 'js:jetbrains' = ['GoToTab7'] }
-t8 = { name = "Tab 8", 'js:jetbrains' = ['GoToTab8'] }
-t9 = { name = "Tab 9", 'js:jetbrains' = ['GoToTab9'] }
-td = { name = "Tab: Move Down", 'js:jetbrains' = ['MoveTabDown'] }
-tr = { name = "Tab: Move Right", 'js:jetbrains' = ['MoveTabRight'] }
+t1 = { name = "Tab 1", 'emit:command' = ['GoToTab1'] }
+t2 = { name = "Tab 2", 'emit:command' = ['GoToTab2'] }
+t3 = { name = "Tab 3", 'emit:command' = ['GoToTab3'] }
+t4 = { name = "Tab 4", 'emit:command' = ['GoToTab4'] }
+t5 = { name = "Tab 5", 'emit:command' = ['GoToTab5'] }
+t6 = { name = "Tab 6", 'emit:command' = ['GoToTab6'] }
+t7 = { name = "Tab 7", 'emit:command' = ['GoToTab7'] }
+t8 = { name = "Tab 8", 'emit:command' = ['GoToTab8'] }
+t9 = { name = "Tab 9", 'emit:command' = ['GoToTab9'] }
+td = { name = "Tab: Move Down", 'emit:command' = ['MoveTabDown'] }
+tr = { name = "Tab: Move Right", 'emit:command' = ['MoveTabRight'] }
 
 '?f' = { name = "Find/File" }
 
@@ -50,13 +47,13 @@ fa = { name = "Find Action", command = "Find Action...", shortcut = "cmd+shift+a
 fp = { name = "File: Path", shortcut = "cmd+shift+c" }
 fb = { name = "File: Back", command = "Recent Files", shortcut = "cmd+e" }
 fn = { name = "File: New", command = "New in This Directory", shortcut = "ctrl+option+n" }
-fnn = { name = "File: New Name", 'js:jetbrains' = ['RenameFile'] }
+fnn = { name = "File: New Name", 'emit:command' = ['RenameFile'] }
 fns = { name = "File: New Scratch", shortcut = "cmd+shift+n" }
-fh = { name = "File: Here", 'js:jetbrains' = ['NewFile'] }
-fd = { name = "File: Directory", 'js:jetbrains' = ['NewDir'] }
+fh = { name = "File: Here", 'emit:command' = ['NewFile'] }
+fd = { name = "File: Directory", 'emit:command' = ['NewDir'] }
 ft = { name = "File: Trash", shortcut = "cmd+delete" }
 fvs = { name = "File: View Structure", command = "File Structure", shortcut = "cmd+f12" }
-fs = { name = "File: Show", 'js:jetbrains' = ['SelectInProjectView'] }
+fs = { name = "File: Show", 'emit:command' = ['SelectInProjectView'] }
 
 '?b' = { name = "Build" }
 bp = { name = "Build Project", command = "Build Project", shortcut = "cmd+f9" }
@@ -64,13 +61,13 @@ br = { name = "Build: Rebuild", command = "Rebuild", shortcut = "cmd+shift+f9" }
 
 '?s' = { name = "Split/Search" }
 # Split
-sr = { name = "Split: Right", 'js:jetbrains' = ['SplitHorizontally'] }
-sd = { name = "Split: Down", 'js:jetbrains' = ['SplitVertically'] }
-so = { name = "Split: Orientation", 'js:jetbrains' = ['ChangeSplitOrientation'] }
+sr = { name = "Split: Right", 'emit:command' = ['SplitHorizontally'] }
+sd = { name = "Split: Down", 'emit:command' = ['SplitVertically'] }
+so = { name = "Split: Orientation", 'emit:command' = ['ChangeSplitOrientation'] }
 sx = { name = "Split: Next", shortcut = "opt+right" }
 sv = { name = "Split: Previous", shortcut = "opt+shift+right" }
-sq = { name = "Split: Quit", 'js:jetbrains' = ['Unsplit'] }
-sqa = { name = "Split: Quit All", 'js:jetbrains' = ['UnsplitAll'] }
+sq = { name = "Split: Quit", 'emit:command' = ['Unsplit'] }
+sqa = { name = "Split: Quit All", 'emit:command' = ['UnsplitAll'] }
 
 # Search
 sg = { name = "Search: Globally", command = "Search Everywhere", shortcut = "shift shift" }
@@ -107,27 +104,27 @@ fsd = { name = "Font Size: Decrease", command = "Decrease Font Size in All Edito
 ff = { name = "Folding: Fold", command = "Collapse", shortcut = "cmd+NumpadSubtract" }
 ffs = { name = "Folding: Fold Selection", command = "Fold Selection", shortcut = "cmd+." }
 ffa = { name = "Folding: Fold All", command = "Expand All", shortcut = "cmd+shift+NumpadAdd" }
-ffc = { name = "Folding: Fold Comments", 'js:jetbrains' = ['CollapseDocComments'] }
+ffc = { name = "Folding: Fold Comments", 'emit:command' = ['CollapseDocComments'] }
 ffr = { name = "Folding: Fold Recursively", command = "Collapse Recursively", shortcut = "cmd+option+NumpadSubtract" }
 '?fu' = { name = "Folding Unfold" }
 fu = { name = "Folding: Unfold", command = "Expand", shortcut = "cmd+NumpadAdd" }
 fua = { name = "Folding: Unfold All", command = "Collapse All", shortcut = "cmd+shift+NumpadSubtract" }
-fuc = { name = "Folding: Unfold Comments", 'js:jetbrains' = ['ExpandDocComments'] }
+fuc = { name = "Folding: Unfold Comments", 'emit:command' = ['ExpandDocComments'] }
 fur = { name = "Folding: Unfold Recursively", command = "Expand Recursively", shortcut = "cmd+option+NumpadAdd" }
 '?f{1..5,l}' = { name = "Folding Level" }
-fl = { name = "Folding: Level", 'js:jetbrains' = ['ExpandToLevel'] }
-f1 = { name = "Folding: Level 1", 'js:jetbrains' = ['ExpandToLevel1'] }
-f2 = { name = "Folding: Level 2", 'js:jetbrains' = ['ExpandToLevel2'] }
-f3 = { name = "Folding: Level 3", 'js:jetbrains' = ['ExpandToLevel3'] }
-f4 = { name = "Folding: Level 4", 'js:jetbrains' = ['ExpandToLevel4'] }
-f5 = { name = "Folding: Level 5", 'js:jetbrains' = ['ExpandToLevel5'] }
+fl = { name = "Folding: Level", 'emit:command' = ['ExpandToLevel'] }
+f1 = { name = "Folding: Level 1", 'emit:command' = ['ExpandToLevel1'] }
+f2 = { name = "Folding: Level 2", 'emit:command' = ['ExpandToLevel2'] }
+f3 = { name = "Folding: Level 3", 'emit:command' = ['ExpandToLevel3'] }
+f4 = { name = "Folding: Level 4", 'emit:command' = ['ExpandToLevel4'] }
+f5 = { name = "Folding: Level 5", 'emit:command' = ['ExpandToLevel5'] }
 '?fa{1..5,l}' = { name = "Folding All Level" }
-fal = { name = "Folding: All Level", 'js:jetbrains' = ['ExpandAllToLevel'] }
-fa1 = { name = "Folding: All Level 1", 'js:jetbrains' = ['ExpandAllToLevel1'] }
-fa2 = { name = "Folding: All Level 2", 'js:jetbrains' = ['ExpandAllToLevel2'] }
-fa3 = { name = "Folding: All Level 3", 'js:jetbrains' = ['ExpandAllToLevel3'] }
-fa4 = { name = "Folding: All Level 4", 'js:jetbrains' = ['ExpandAllToLevel4'] }
-fa5 = { name = "Folding: All Level 5", 'js:jetbrains' = ['ExpandAllToLevel5'] }
+fal = { name = "Folding: All Level", 'emit:command' = ['ExpandAllToLevel'] }
+fa1 = { name = "Folding: All Level 1", 'emit:command' = ['ExpandAllToLevel1'] }
+fa2 = { name = "Folding: All Level 2", 'emit:command' = ['ExpandAllToLevel2'] }
+fa3 = { name = "Folding: All Level 3", 'emit:command' = ['ExpandAllToLevel3'] }
+fa4 = { name = "Folding: All Level 4", 'emit:command' = ['ExpandAllToLevel4'] }
+fa5 = { name = "Folding: All Level 5", 'emit:command' = ['ExpandAllToLevel5'] }
 
 # Multiple carets and selection ranges
 # = { name = "Add/Remove Caret", command = "Add/Remove Caret", shortcut = "option+shift+click" }
@@ -186,13 +183,13 @@ ce = { name = "Code: Error Description", command = "Error Description", shortcut
 # Goto
 '?g' = { name = 'Goto / Git' }
 gl = { name = "Go to Line/Column...", command = "Go to Line/Column...", shortcut = "cmd+l" }
-gk = { name = "Goto Class", 'js:jetbrains' = ['GotoClass'] }
+gk = { name = "Goto Class", 'emit:command' = ['GotoClass'] }
 gpx = { name = "Goto Problem: Next", command = "Next Highlighted Error", shortcut = "f2" }
 gpv = { name = "Goto Problem: Previous", command = "Previous Highlighted Error", shortcut = "shift+f2" }
 gd = { name = "Goto Declaration or Usages", command = "Go to Declaration or Usages", shortcut = "cmd+b" }
 gy = { name = "Goto Type Declaration", command = "Go to Type Declaration", shortcut = "cmd+shift+b" }
 gsm = { name = "Goto Super Method", command = "Go to Super Method", shortcut = "cmd+u" }
-gm = { name = "Goto Menu", 'js:jetbrains' = ['GoToMenu'] }
+gm = { name = "Goto Menu", 'emit:command' = ['GoToMenu'] }
 gi = { name = "Goto Implementation(s)", command = "Go to Implementation(s)", shortcut = "cmd+option+b" }
 gs = { name = "Goto Symbol", command = "Go to Symbol...", shortcut = "cmd+option+o" }
 gt = { name = "Goto Test", command = "Go to Test", shortcut = "cmd+shift+t" }
@@ -324,6 +321,6 @@ pc = { name = "Panel: Commit", command = "Show Commit window", shortcut = "cmd+0
 pt = { name = "Panel: Terminal", command = "Show Terminal window", shortcut = "opt+f12" }
 
 '?z' = { name = "Zoom / Zen" }
-zo = { name = "Zoom Out", 'js:jetbrains' = ['ZoomOutIdeAction'] }
-zi = { name = "Zoom In", 'js:jetbrains' = ['ZoomInIdeAction'] }
-zm = { name = "Zen Mode", 'js:jetbrains' = ['ToggleZenMode'] }
+zo = { name = "Zoom Out", 'emit:command' = ['ZoomOutIdeAction'] }
+zi = { name = "Zoom In", 'emit:command' = ['ZoomInIdeAction'] }
+zm = { name = "Zen Mode", 'emit:command' = ['ToggleZenMode'] }

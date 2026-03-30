@@ -1,7 +1,8 @@
 name = "DataGrip"
 
-[js]
-jetbrains = ['/Applications/DataGrip.app/Contents/MacOS/datagrip']
+[handlers.command]
+file = "jetbrains.js"
+args = ['/Applications/DataGrip.app/Contents/MacOS/datagrip']
 
-[chords.'(.*)']
-file = '@keychord/chords-jetbrains/chords/base.toml'
+[[import]]
+file = 'base.toml'

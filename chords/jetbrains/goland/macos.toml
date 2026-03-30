@@ -1,7 +1,8 @@
 name = "GoLand"
 
-[meta]
-jetbrains = ['/Applications/GoLand.app/Contents/MacOS/goland']
+[handlers.command]
+file = "jetbrains.js"
+args = ['/Applications/GoLand.app/Contents/MacOS/goland']
 
-[chords.'(.*)']
-file = "@keychords/chords-jetbrains/chords/base.toml"
+[[import]]
+file = "base.toml"

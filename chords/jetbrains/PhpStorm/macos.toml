@@ -1,7 +1,8 @@
 name = "PhpStorm"
 
-[js]
-jetbrains = ['/Applications/PhpStorm.app/Contents/MacOS/phpstorm']
+[handlers.command]
+file = "jetbrains.js"
+args = ['/Applications/PhpStorm.app/Contents/MacOS/phpstorm']
 
-[chords.'(.*)']
-file = "@keychord/chords-jetbrains/chords/base.toml"
+[[import]]
+file = "base.toml"

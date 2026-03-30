@@ -1,7 +1,8 @@
 name = "Rider"
 
-[js]
-jetbrains = ['/Applications/Rider.app/Contents/MacOS/rider']
+[handlers.command]
+file = "jetbrains.js"
+args = ['/Applications/Rider.app/Contents/MacOS/rider']
 
-[chords.'(.*)']
-file = "@keychord/chords-jetbrains/chords/base.toml"
+[[import]]
+file = "base.toml"
