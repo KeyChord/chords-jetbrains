@@ -118,7 +118,7 @@ f2 = { name = "Folding: Level 2", 'emit:command' = ['ExpandToLevel2'] }
 f3 = { name = "Folding: Level 3", 'emit:command' = ['ExpandToLevel3'] }
 f4 = { name = "Folding: Level 4", 'emit:command' = ['ExpandToLevel4'] }
 f5 = { name = "Folding: Level 5", 'emit:command' = ['ExpandToLevel5'] }
-'?fa([1-5l]' = { name = "Folding All Level" }
+'?fa([1-5l])' = { name = "Folding All Level" }
 fal = { name = "Folding: All Level", 'emit:command' = ['ExpandAllToLevel'] }
 fa1 = { name = "Folding: All Level 1", 'emit:command' = ['ExpandAllToLevel1'] }
 fa2 = { name = "Folding: All Level 2", 'emit:command' = ['ExpandAllToLevel2'] }
