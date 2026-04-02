@@ -86,7 +86,7 @@ sc = { name = "Search: Content Text", shortcut = "cmd+shift+option+e" }
 
 
 # Basic editing
-pap = { name = "Paste as Plain Text", command = "Paste as Plain Text", shortcut = "cmd+option+shift+v" }
+# pap = { name = "Paste as Plain Text", command = "Paste as Plain Text", shortcut = "cmd+option+shift+v" }
 ph = { name = "Paste from History...", command = "Paste from History...", shortcut = "cmd+shift+v" }
 cpp = { name = "Copy Paths", command = "Copy Paths", shortcut = "cmd+shift+c" }
 cpr = { name = "Copy Reference", command = "Copy Reference", shortcut = "cmd+option+shift+c" }
@@ -308,19 +308,26 @@ dr = { name = "Diff: Right Accept", command = "Accept Right Side", shortcut = "c
 dss = { name = "Diff: Show Settings", command = "Show Diff Settings Popup...", shortcut = "cmd+shift+d" }
 
 '?p' = { name = "Panel" }
+
+'?ph' = { name = "Panel: Hide" }
 phc = { name = "Panel: Hide Current", command = "Hide Active Tool Window", shortcut = "shift+esc" }
 pha = { name = "Panel: Hide All", command = "Hide All Tool Windows", shortcut = "cmd+shift+f12" }
-pb = { name = "Panel: Back", command = "Jump to Last Tool Window", shortcut = "f12" }
-psl = { name = "Panel: Stretch Left", command = "Stretch to Left", shortcut = "ctrl+option+left" }
-psr = { name = "Panel: Stretch Right", command = "Stretch to Right", shortcut = "ctrl+option+right" }
-pst = { name = "Panel: Stretch Top", command = "Stretch to Top", shortcut = "ctrl+option+up" }
-psb = { name = "Panel: Stretch Bottom", command = "Stretch to Bottom", shortcut = "ctrl+option+down" }
-pj = { name = "Panel: Project", command = "Show Project window", shortcut = "cmd+1" }
+
+'?pr' = { name = "Panel: Run / Resize" }
+pr = { name = "Panel: Run", command = "Show Run window", shortcut = "cmd+4" }
+prl = { name = "Panel: Stretch Left", 'emit:command' = "ResizeToolWindowLeft", shortcut = "ctrl+option+left" }
+prr = { name = "Panel: Resize Right", command = "ResizeToolWindowRight", shortcut = "ctrl+option+right" }
+pru = { name = "Panel: Resize Top", command = "ResizeToolWindowUp", shortcut = "ctrl+option+up" }
+prd = { name = "Panel: Resize Down", command = "ResizeToolWindowDown", shortcut = "ctrl+option+down" }
+
+'p[' = { name = "Panel: Back", command = "Jump to Last Tool Window", shortcut = "f12" }
+pb = { name = "Panel: Build", 'emit:command' = 'ActivateBuildToolWindow' }
+ptc = { name = "Panel: Test Coverage", 'emit:command' = 'ActivateCoverageToolWindow' }
+pp = { name = "Panel: Project", command = "Show Project window", shortcut = "cmd+1" }
 pm = { name = "Panel: Marks", command = "Show Bookmarks window", shortcut = "cmd+2" }
 pf = { name = "Panel: Find", command = "Show Find window", shortcut = "cmd+3" }
-pr = { name = "Panel: Run", command = "Show Run window", shortcut = "cmd+4" }
 pd = { name = "Panel: Debug", command = "Show Debug window", shortcut = "cmd+5" }
-pp = { name = "Panel: Problems", command = "Show Problems window", shortcut = "cmd+6" }
+pi = { name = "Panel: Issues", command = "Show Problems window", shortcut = "cmd+6" }
 ps = { name = "Panel: Structure", command = "Show Structure window", shortcut = "cmd+7" }
 pv = { name = "Panel: Services", command = "Show Services window", shortcut = "cmd+9" }
 pg = { name = "Panel: Git", command = "Show Version Control window", shortcut = "cmd+9" }
