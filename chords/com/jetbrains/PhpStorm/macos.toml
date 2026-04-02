@@ -1,8 +1,6 @@
 name = "PhpStorm"
 
-[handlers.command]
-file = "jetbrains.js"
-args = ['/Applications/PhpStorm.app/Contents/MacOS/phpstorm']
-
 [[import]]
 file = "base.toml"
+[import.overrides.meta]
+'$execPath' = "/Applications/PhpStorm.app/Contents/MacOS/phpstorm"

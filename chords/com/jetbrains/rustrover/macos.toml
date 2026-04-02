@@ -1,9 +1,6 @@
 name = "RustRover"
 
-[handlers.command]
-file = "jetbrains.js"
-args = ['/Applications/RustRover.app/Contents/MacOS/rustrover']
-
 [[import]]
 file = "base.toml"
-
+[import.overrides.meta]
+'$execPath' = "/Applications/RustRover.app/Contents/MacOS/rustrover"

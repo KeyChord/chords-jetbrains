@@ -1,5 +1,12 @@
 name = "JetBrains Base Chords"
 
+[meta]
+'$execPath' = ""
+
+[handlers.command]
+file = "jetbrains.js"
+args = ['$execPath']
+
 [chords]
 '?e' = { name = "Editor" }
 ea = { name = "Editor: Actions", 'emit:command' = ['QuickActions'] }

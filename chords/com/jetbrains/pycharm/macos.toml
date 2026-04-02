@@ -1,8 +1,6 @@
 name = "PyCharm"
 
-[handlers.command]
-file = "jetbrains.js"
-args = ['/Applications/PyCharm.app/Contents/MacOS/pycharm']
-
 [[import]]
 file = "base.toml"
+[import.overrides.meta]
+'$execPath' = "/Applications/PyCharm.app/Contents/MacOS/pycharm"

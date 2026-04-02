@@ -1,8 +1,6 @@
 name = "DataGrip"
 
-[handlers.command]
-file = "jetbrains.js"
-args = ['/Applications/DataGrip.app/Contents/MacOS/datagrip']
-
 [[import]]
-file = 'base.toml'
+file = "base.toml"
+[import.overrides.meta]
+'$execPath' = "/Applications/DataGrip.app/Contents/MacOS/datagrip"

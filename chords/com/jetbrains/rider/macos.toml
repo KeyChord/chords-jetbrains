@@ -1,8 +1,6 @@
 name = "Rider"
 
-[handlers.command]
-file = "jetbrains.js"
-args = ['/Applications/Rider.app/Contents/MacOS/rider']
-
 [[import]]
 file = "base.toml"
+[import.overrides.meta]
+'$execPath' = "/Applications/Rider.app/Contents/MacOS/rider"

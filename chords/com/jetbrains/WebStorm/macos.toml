@@ -1,8 +1,6 @@
 name = "WebStorm"
 
-[handlers.command]
-file = "jetbrains.js"
-args = ['/Applications/WebStorm.app/Contents/MacOS/webstorm']
-
 [[import]]
 file = "base.toml"
+[import.overrides.meta]
+'$execPath' = "/Applications/WebStorm.app/Contents/MacOS/webstorm"
