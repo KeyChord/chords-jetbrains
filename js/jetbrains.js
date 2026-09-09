@@ -120,7 +120,9 @@ var import_lib = (/* @__PURE__ */ __commonJSMin(((exports, module) => {
 	} catch (e) {}
 })))();
 function buildAction(ideBinPath) {
-	if (!ideBinPath) throw new Error("IDE binpath must be provided");
+	if (!ideBinPath) return () => {
+		throw new Error("IDE binpath must be provided");
+	};
 	const tmp = Bun.env.TMPDIR ?? "/tmp";
 	return async function action(commandId) {
 		const id = Math.random();
