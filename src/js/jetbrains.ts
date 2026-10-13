@@ -6,7 +6,7 @@ export default function buildAction(ideBinPath: string) {
   // though it only exists to be imported. Its `[meta]` placeholder `'$execPath'` is empty, so
   // this runs with no bin path on every load. Return a throwing stub rather than throwing here:
   // throwing would abort handler registration and make Chord skip base.toml entirely, taking
-  // every `emit:command` chord in all the importing IDEs down with it.
+  // every `@input:command` chord in all the importing IDEs down with it.
   if (!ideBinPath) {
     return () => {
       throw new Error("IDE binpath must be provided");
