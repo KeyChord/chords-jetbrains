@@ -1,0 +1,6 @@
+name = 'PhpStorm'
+
+[[import]]
+file = 'base.toml'
+[import.override.meta]
+'$execPath' = '/Applications/PhpStorm.app/Contents/MacOS/phpstorm'
