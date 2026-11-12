@@ -1,0 +1,6 @@
+name = 'RustRover'
+
+[[import]]
+file = 'base.toml'
+[import.override.meta]
+'$execPath' = '/Applications/RustRover.app/Contents/MacOS/rustrover'

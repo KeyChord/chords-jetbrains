@@ -1,0 +1,6 @@
+name = 'RubyMine'
+
+[[import]]
+file = 'base.toml'
+[import.override.meta]
+'$execPath' = '/Applications/RubyMine.app/Contents/MacOS/rubymine'
